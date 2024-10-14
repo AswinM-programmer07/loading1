@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Form</title>
+</head>
+<body>
+    <form id="userInfoForm">
+        <h2>User Information</h2>
+        <label>Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label>Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label>Product:</label>
+        <input type="text" id="product" required><br>
+
+        <label>Offer Price:</label>
+        <input type="number" id="offerPrice" step="0.01" required><br>
+
+        <label>Selling Price:</label>
+        <input type="number" id="sellingPrice" step="0.01" required><br>
+
+        <label>Coupon code:</label>
+        <input type="text" id="couponCode" step="0.01" required><br>
+
+        <h3>Select Coupon Types:</h3>
+        <label><input type="checkbox" value="Ticket Booking"> Ticket Booking</label><br>
+        <label><input type="checkbox" value="Electronics and Gadgets"> Electronics and Gadgets</label><br>
+        <label><input type="checkbox" value="Recharge and Subscription"> Recharge and Subscription</label><br>
+        <label><input type="checkbox" value="Cosmetics"> Cosmetics</label><br>
+        <label><input type="checkbox" value="Medicines"> Medicines</label><br>
+        <label><input type="checkbox" value="Others"> Others</label><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portfolio</title>
+</head>
+<body>
+    <h2>User Portfolio</h2>
+    <p id="name"></p>
+    <p id="email"></p>
+    <p id="product"></p>
+    <p id="offerPrice"></p>
+    <p id="sellingPrice"></p>
+    <button onclick="goBack()">Back</button>
+
+    <button onclick="window.location.href='viewCouponCode.html'">View Coupon Code</button>
+
+    <script>
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (currentUser) {
+            document.getElementById('name').textContent = `Name: ${currentUser.name}`;
+            document.getElementById('email').textContent = `Email: ${currentUser.email}`;
+            document.getElementById('product').textContent = `Product: ${currentUser.product}`;
+            document.getElementById('offerPrice').textContent = `Offer Price: $${currentUser.offerPrice}`;
+            document.getElementById('sellingPrice').textContent = `Selling Price: $${currentUser.sellingPrice}`;
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

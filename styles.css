@@ -1,0 +1,183 @@
+
+  
+.navbar{
+    background-color: #ffccbc;
+}
+button{
+    border: none;
+    color: #0097b2;
+    font-size: 1.3rem;
+    background-color: #ffccbc;
+
+   
+}
+button:hover{
+    border: none;
+    color: #d73c2c;
+    font-size: 1.3rem;
+    background-color: #ffccbc;
+}
+.prodcard{
+  margin:10px;
+    border: 2px solid rgba(0, 0, 0, 0.089);
+    background-color:#b0000071;
+    border-radius: 13px;
+    
+}
+
+.bod{
+    background-color:#dd4b39;
+    border-top-right-radius: 13px;
+    border-top-left-radius: 13px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #bb8d0f;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  li{
+    list-style: none;
+  }
+
+.footer{
+    background-color: #dd4b39;
+}
+
+
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container1 {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.card {
+  width: 80px;
+  border-radius: .75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row1 {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card > .row1 > .icon {
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.card > .row1 > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+
+.description  {
+  color: #b0b0ba;
+  padding-top: 5px;
+}
+
+.description h4 {
+  text-transform: uppercase;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 600px;
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  background-image: url('students\ in\ library.jfif');
+}
+.card[for="c2"] {
+  background-image: url('marathon.jfif');
+}
+.card[for="c3"] {
+  background-image: url('hackathons.webp');
+}
+.card[for="c4"] {
+  background-image: url('dance.webp');
+}
+
+
+
+

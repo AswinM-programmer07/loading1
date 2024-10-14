@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Password to View Coupon Code</title>
+</head>
+<body>
+    <h2>Enter Password to View Coupon Code</h2>
+    <form id="passwordForm">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="couponMessage"></p>
+
+    <script>
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const enteredPassword = document.getElementById('password').value;
+            const correctPassword = "aswin0710"; // Correct password
+            const currentUser = JSON.parse(localStorage.getItem('currentUser')); // Retrieve user info
+
+            if (enteredPassword === correctPassword) {
+                // Display the coupon code if password is correct
+                if (currentUser && currentUser.couponCode) {
+                    document.getElementById('couponMessage').innerText = `Your Coupon Code: ${currentUser.couponCode}`;
+                } else {
+                    document.getElementById('couponMessage').innerText = 'No coupon code found.';
+                }
+            } else {
+                // Show an error message if the password is incorrect
+                document.getElementById('couponMessage').innerText = 'Incorrect password. Please try again.';
+            }
+        });
+    </script>
+</body>
+</html>
